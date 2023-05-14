@@ -75,7 +75,11 @@ public class BiggerStatus {
             drawNameplate(e.getRenderer().getFontRendererFromRenderManager(), s, (float) e.getX(), (float) (e.getY()+2+e.getEntity().height*2), (float) e.getZ(),0,e.getRenderer().getRenderManager().playerViewY,e.getRenderer().getRenderManager().playerViewX,e.getRenderer().getRenderManager().options.thirdPersonView == 2,false,6f);
         }
     }
-    //inspire from Wynntils(https://github.com/Wynntils/Wynntils)
+    /**
+     * Taken from Wynntils and modified on 2023/05/14 under GNU Affero General Public License v3.0
+     * https://github.com/Wynntils/Wynntils/blob/development/LICENSE
+     * @author Wynntils
+     */
     public static void drawNameplate(FontRenderer fontRendererIn, String str, float x, float y, float z, int verticalShift, float viewerYaw, float viewerPitch, boolean isThirdPersonFrontal, boolean isSneaking, float scale)
     {
         GlStateManager.pushMatrix();
