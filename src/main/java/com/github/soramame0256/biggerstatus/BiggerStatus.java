@@ -9,6 +9,7 @@ import net.minecraft.client.renderer.Tessellator;
 import net.minecraft.client.renderer.entity.RenderEntity;
 import net.minecraft.client.renderer.vertex.DefaultVertexFormats;
 import net.minecraft.entity.EntityLiving;
+import net.minecraft.entity.item.EntityArmorStand;
 import net.minecraft.item.Item;
 import net.minecraftforge.client.event.RenderLivingEvent;
 import net.minecraftforge.common.MinecraftForge;
@@ -72,7 +73,8 @@ public class BiggerStatus {
         Matcher matcher;
         if ((matcher = HEALTH_NAME_TAG_REG.matcher(e.getEntity().getCustomNameTag())).matches()) {
             String s = matcher.group("status");
-            drawNameplate(e.getRenderer().getFontRendererFromRenderManager(), s, (float) e.getX(), (float) (e.getY()+2+e.getEntity().height*2), (float) e.getZ(),0,e.getRenderer().getRenderManager().playerViewY,e.getRenderer().getRenderManager().playerViewX,e.getRenderer().getRenderManager().options.thirdPersonView == 2,false,6f);
+            //System.out.println(e.getY()+e.getEntity().height + " nm" + e.getEntity().toString());
+            drawNameplate(e.getRenderer().getFontRendererFromRenderManager(), s, (float) e.getX(), (float) (e.getY()+e.getEntity().height + 3F), (float) e.getZ(),0,e.getRenderer().getRenderManager().playerViewY,e.getRenderer().getRenderManager().playerViewX,e.getRenderer().getRenderManager().options.thirdPersonView == 2,false,6f);
         }
     }
     /**
